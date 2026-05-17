@@ -1,0 +1,73 @@
+[package]
+name = "fib-quant"
+version = "0.1.0-alpha.1"
+edition = "2021"
+rust-version = "1.75"
+description = "Experimental Rust implementation of the FibQuant radial-angular vector quantization core"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/recursiveintell/fib-quant"
+homepage = "https://github.com/recursiveintell/fib-quant"
+documentation = "https://docs.rs/fib-quant"
+keywords = ["quantization", "vector", "kv-cache", "llm", "compression"]
+categories = ["compression", "science", "algorithms"]
+include = [
+    "Cargo.toml",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "RELEASE_CHECKLIST.md",
+    "src/**",
+    "tests/**",
+    "benches/**",
+    "deny.toml",
+    "examples/**",
+    "docs/compression/**",
+    "docs/kv/**",
+]
+
+[features]
+default = []
+kv = []
+
+[dependencies]
+blake3 = "1.8.3"
+half = "2"
+nalgebra = { version = "0.33", features = ["serde-serialize"] }
+rand = "0.8"
+rand_chacha = "0.3"
+rand_distr = "0.4"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+statrs = "0.17"
+thiserror = "2.0.18"
+
+[dev-dependencies]
+criterion = { version = "0.7", features = ["html_reports"] }
+proptest = "1"
+
+[[bench]]
+name = "encode_decode"
+harness = false
+
+[[bench]]
+name = "codebook_build"
+harness = false
+
+[[bench]]
+name = "kv_encode_decode"
+harness = false
+required-features = ["kv"]
+
+[[bench]]
+name = "kv_attention_ref"
+harness = false
+required-features = ["kv"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[lints.rust]
+unsafe_code = "forbid"
