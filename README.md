@@ -2,7 +2,7 @@
 
 [![Crates.io](https://img.shields.io/crates/v/fib-quant.svg)](https://crates.io/crates/fib-quant)
 [![Docs.rs](https://docs.rs/fib-quant/badge.svg)](https://docs.rs/fib-quant)
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[License metadata discrepancy](#license)
 
 `fib-quant` is an experimental Rust implementation of the core radial-angular vector quantization path described in the FibQuant paper:
 
@@ -35,18 +35,20 @@ This release does not claim:
 
 Benchmark results from the arXiv paper should be cited as paper results unless this repository contains local benchmark receipts with enough metadata to reproduce them.
 
-## Install
+## Use this source revision
+
+This checkout declares `0.1.0-alpha.1`. The [registry](https://crates.io/crates/fib-quant/versions) marks that release yanked; the non-yanked published line has advanced to `0.1.0-beta.4` as checked on September 30, 2026. Use a local path dependency to reproduce this checkout rather than assuming these alpha APIs describe the beta release.
 
 ```toml
 [dependencies]
-fib-quant = "0.1.0-alpha.1"
+fib-quant = { path = "/path/to/fib-quant" }
 ```
 
 The KV-cache reference contracts are experimental and default-off:
 
 ```toml
 [dependencies]
-fib-quant = { version = "0.1.0-alpha.1", features = ["kv"] }
+fib-quant = { path = "/path/to/fib-quant", features = ["kv"] }
 ```
 
 ## Minimal Example
@@ -74,7 +76,7 @@ fn main() -> fib_quant::Result<()> {
 
 ## Release Posture
 
-`0.1.0-alpha.1` is an alpha research release. The public API is intentionally narrow and validation-heavy. Profiles reject unsupported dimensions, rates, methods, training sample counts, schema markers, norm formats, and source modes before allocation-heavy paths run.
+This source tree is an alpha research snapshot. The public API is intentionally narrow and validation-heavy. Profiles reject unsupported dimensions, rates, methods, training sample counts, schema markers, norm formats, and source modes before allocation-heavy paths run.
 
 The optional `kv` feature adds typed contracts, role-aware policy decisions, fixed-page metadata, receipts, synthetic attention-quality helpers, and CPU reference paths. It remains an experimental reference layer, not a production serving backend.
 
@@ -109,4 +111,4 @@ If this crate is useful in your work, cite both this implementation and the FibQ
 
 ## License
 
-Licensed under the Apache License, Version 2.0. See `LICENSE`.
+The [Cargo manifest](Cargo.toml) declares Apache-2.0, while the checked-in [LICENSE](LICENSE) contains MIT text. These existing declarations conflict. This README does not choose or change the licensing terms; the maintainer must reconcile them before relying on a single license statement for redistribution.
