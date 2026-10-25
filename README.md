@@ -1,5 +1,7 @@
 # fib-quant
 
+<!-- last-verified: 2026-10-25 -->
+
 [![Crates.io](https://img.shields.io/crates/v/fib-quant.svg)](https://crates.io/crates/fib-quant)
 [![Docs.rs](https://docs.rs/fib-quant/badge.svg)](https://docs.rs/fib-quant)
 [License metadata discrepancy](#license)
@@ -37,7 +39,7 @@ Benchmark results from the arXiv paper should be cited as paper results unless t
 
 ## Use this source revision
 
-This checkout declares `0.1.0-alpha.1`. The [registry](https://crates.io/crates/fib-quant/versions) marks that release yanked; the non-yanked published line has advanced to `0.1.0-beta.4` as checked on September 30, 2026. Use a local path dependency to reproduce this checkout rather than assuming these alpha APIs describe the beta release.
+This checkout declares `0.1.0-alpha.1`. The [registry](https://crates.io/crates/fib-quant/versions) marks that release yanked; the non-yanked published line has advanced to `0.1.0-beta.4` (verified on 2026-10-25). Use a local path dependency to reproduce this checkout rather than assuming these alpha APIs describe the beta release.
 
 ```toml
 [dependencies]
@@ -111,4 +113,4 @@ If this crate is useful in your work, cite both this implementation and the FibQ
 
 ## License
 
-The [Cargo manifest](Cargo.toml) declares Apache-2.0, while the checked-in [LICENSE](LICENSE) contains MIT text. These existing declarations conflict. This README does not choose or change the licensing terms; the maintainer must reconcile them before relying on a single license statement for redistribution.
+The [Cargo manifest](https://github.com/RecursiveIntell/fib-quant/blob/main/Cargo.toml) declares Apache-2.0, while the checked-in [LICENSE](https://github.com/RecursiveIntell/fib-quant/blob/main/LICENSE) contains MIT text. These existing declarations conflict. This README does not choose or change the licensing terms; the maintainer must reconcile them before relying on a single license statement for redistribution.
