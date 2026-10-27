@@ -1,6 +1,6 @@
 # fib-quant
 
-<!-- last-verified: 2026-10-25 -->
+<!-- last-verified: 2026-10-26 -->
 
 [![Crates.io](https://img.shields.io/crates/v/fib-quant.svg)](https://crates.io/crates/fib-quant)
 [![Docs.rs](https://docs.rs/fib-quant/badge.svg)](https://docs.rs/fib-quant)
@@ -11,6 +11,16 @@
 > Namyoon Lee and Yongjune Kim, "FibQuant: Universal Vector Quantization for Random-Access KV-Cache Compression", arXiv:2605.11478.
 
 This crate is meant for research, conformance experiments, and integration prototypes. It does not claim production KV-cache serving readiness, paper benchmark reproduction, fused GPU kernel support, or superiority over other KV-cache quantization systems.
+
+## Quick Start
+
+Requires Rust and Cargo. The manifest declares `rust-version = "1.75"`; this example was exercised with Rust 1.98.1 and Cargo 1.98.1. Run it from the repository root:
+
+```bash
+cargo run --locked --example encode_decode
+```
+
+A successful run prints encoded and source-vector digests followed by `decoded_len=8`. This exercises the example's fixed eight-element input; it is not a quality or performance benchmark.
 
 ## What Is Implemented
 
