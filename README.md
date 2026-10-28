@@ -1,6 +1,6 @@
 # fib-quant
 
-<!-- last-verified: 2026-10-26 -->
+<!-- last-verified: 2026-10-27 -->
 
 [![Crates.io](https://img.shields.io/crates/v/fib-quant.svg)](https://crates.io/crates/fib-quant)
 [![Docs.rs](https://docs.rs/fib-quant/badge.svg)](https://docs.rs/fib-quant)
@@ -49,7 +49,9 @@ Benchmark results from the arXiv paper should be cited as paper results unless t
 
 ## Use this source revision
 
-This checkout declares `0.1.0-alpha.1`. The [registry](https://crates.io/crates/fib-quant/versions) marks that release yanked; the non-yanked published line has advanced to `0.1.0-beta.4` (verified on 2026-10-25). Use a local path dependency to reproduce this checkout rather than assuming these alpha APIs describe the beta release.
+This checkout declares `0.1.0-alpha.1`. The [registry](https://crates.io/crates/fib-quant/versions) marks that release yanked; the non-yanked published line has advanced to `0.1.0-beta.4` (verified on 2026-10-27). Use a local path dependency to reproduce this checkout rather than assuming these alpha APIs describe the beta release.
+
+**Registry-page boundary:** The published `0.1.0-beta.4` README contains `~50×` compression and `100%` recall statements. This checkout's source and benchmark plan do not establish those beta.4 statements; treat them as version-specific registry copy, not verified results for this alpha.1 snapshot.
 
 ```toml
 [dependencies]
