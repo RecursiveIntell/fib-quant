@@ -3,7 +3,7 @@
 <!-- last-verified: 2026-10-27 -->
 
 [![Crates.io](https://img.shields.io/crates/v/fib-quant.svg)](https://crates.io/crates/fib-quant)
-[![Docs.rs](https://docs.rs/fib-quant/badge.svg)](https://docs.rs/fib-quant)
+[API documentation for `0.1.0-alpha.1`](https://docs.rs/fib-quant/0.1.0-alpha.1/fib_quant/)
 [License metadata discrepancy](#license)
 
 `fib-quant` is an experimental Rust implementation of the core radial-angular vector quantization path described in the FibQuant paper:
