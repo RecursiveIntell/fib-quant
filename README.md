@@ -1,6 +1,6 @@
 # fib-quant
 
-<!-- last-verified: 2026-10-27 -->
+<!-- last-verified: 2026-10-29 -->
 
 [![Crates.io](https://img.shields.io/crates/v/fib-quant.svg)](https://crates.io/crates/fib-quant)
 [API documentation for `0.1.0-alpha.1`](https://docs.rs/fib-quant/0.1.0-alpha.1/fib_quant/)
@@ -14,9 +14,11 @@ This crate is meant for research, conformance experiments, and integration proto
 
 ## Quick Start
 
-Requires Rust and Cargo. The manifest declares `rust-version = "1.75"`; this example was exercised with Rust 1.98.1 and Cargo 1.98.1. Run it from the repository root:
+Requires Rust and Cargo. The manifest declares `rust-version = "1.75"`; this example was exercised with Rust 1.98.1 and Cargo 1.98.1. From a fresh clone, run:
 
 ```bash
+git clone https://github.com/RecursiveIntell/fib-quant.git
+cd fib-quant
 cargo run --locked --example encode_decode
 ```
 
